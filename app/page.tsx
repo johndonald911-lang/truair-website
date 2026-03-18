@@ -155,18 +155,24 @@ export default function Home() {
           <div className="text-center mb-5">
             <p className="uppercase tracking-[0.25em] text-slate-400 text-xs md:text-sm font-semibold">Trusted Brands We Install</p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
-            <a href="https://www.facebook.com/Truairconditioning" target="_blank" rel="noreferrer" className="rounded-3xl border border-white/10 bg-white/[0.04] min-h-[96px] md:min-h-[120px] flex items-center justify-center p-5 hover:bg-white/[0.08] hover:border-cyan-300/30 transition">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Fujitsu-Logo.svg" alt="Fujitsu" className="h-10 md:h-12 w-auto object-contain" />
+          <div className="grid grid-cols-2 md:grid-cols-6 gap-3 md:gap-4">
+            <a href="https://www.facebook.com/Truairconditioning" target="_blank" rel="noreferrer" className="rounded-[1.75rem] border border-white/10 bg-white/[0.04] min-h-[88px] md:min-h-[108px] flex items-center justify-center p-2 md:p-3 hover:bg-white/[0.08] hover:border-cyan-300/30 transition">
+              <img src="https://i.ibb.co/Qh6F4CT/images.png" alt="Fujitsu" className="h-14 md:h-20 w-auto max-w-full object-contain rounded-lg bg-white p-1.5" />
             </a>
-            <a href="https://www.facebook.com/Truairconditioning" target="_blank" rel="noreferrer" className="rounded-3xl border border-white/10 bg-white/[0.04] min-h-[96px] md:min-h-[120px] flex items-center justify-center p-5 hover:bg-white/[0.08] hover:border-cyan-300/30 transition">
-              <img src="https://acsisair.com.au/wp-content/uploads/2021/02/daikin-background-white.jpg" alt="Daikin" className="h-10 md:h-12 w-auto object-contain rounded-lg bg-white p-2" />
+            <a href="https://www.facebook.com/Truairconditioning" target="_blank" rel="noreferrer" className="rounded-[1.75rem] border border-white/10 bg-white/[0.04] min-h-[88px] md:min-h-[108px] flex items-center justify-center p-2 md:p-3 hover:bg-white/[0.08] hover:border-cyan-300/30 transition">
+              <img src="https://i.ibb.co/p6Y2RyPW/daikin-logo.png" alt="Daikin" className="h-14 md:h-20 w-auto max-w-full object-contain rounded-lg bg-white p-1.5" />
             </a>
-            <a href="https://www.facebook.com/Truairconditioning" target="_blank" rel="noreferrer" className="rounded-3xl border border-white/10 bg-white/[0.04] min-h-[96px] md:min-h-[120px] flex items-center justify-center p-5 hover:bg-white/[0.08] hover:border-cyan-300/30 transition">
-              <img src="https://fallonsolutions.com.au/wp-content/uploads/2024/06/csm_Mitsubishi_Electric_18d7e03602.png" alt="Mitsubishi Electric" className="h-10 md:h-12 w-auto object-contain rounded-lg bg-white p-2" />
+            <a href="https://www.facebook.com/Truairconditioning" target="_blank" rel="noreferrer" className="rounded-[1.75rem] border border-white/10 bg-white/[0.04] min-h-[88px] md:min-h-[108px] flex items-center justify-center p-2 md:p-3 hover:bg-white/[0.08] hover:border-cyan-300/30 transition">
+              <img src="https://i.ibb.co/DDcDz7Tz/daikin-logo.jpg" alt="Daikin Classic" className="h-14 md:h-20 w-auto max-w-full object-contain rounded-lg bg-white p-1.5" />
             </a>
-            <a href="https://www.instagram.com/truair_airconditioning" target="_blank" rel="noreferrer" className="rounded-3xl border border-white/10 bg-white/[0.04] min-h-[96px] md:min-h-[120px] flex items-center justify-center p-5 hover:bg-white/[0.08] hover:border-cyan-300/30 transition">
-              <div className="text-3xl md:text-4xl font-black tracking-wide text-red-500">TOSHIBA</div>
+            <a href="https://www.facebook.com/Truairconditioning" target="_blank" rel="noreferrer" className="rounded-[1.75rem] border border-white/10 bg-white/[0.04] min-h-[88px] md:min-h-[108px] flex items-center justify-center p-2 md:p-3 hover:bg-white/[0.08] hover:border-cyan-300/30 transition">
+              <img src="https://i.ibb.co/HL6jxMmc/logo-mitsubishi-electric.png" alt="Mitsubishi Electric" className="h-14 md:h-20 w-auto max-w-full object-contain rounded-lg bg-white p-1.5" />
+            </a>
+            <a href="https://www.instagram.com/truair_airconditioning" target="_blank" rel="noreferrer" className="rounded-[1.75rem] border border-white/10 bg-white/[0.04] min-h-[88px] md:min-h-[108px] flex items-center justify-center p-2 md:p-3 hover:bg-white/[0.08] hover:border-cyan-300/30 transition">
+              <img src="https://i.ibb.co/s9M0JzRZ/Panasonic.jpg" alt="Panasonic" className="h-14 md:h-20 w-auto max-w-full object-contain rounded-lg bg-white p-1.5" />
+            </a>
+            <a href="https://www.instagram.com/truair_airconditioning" target="_blank" rel="noreferrer" className="rounded-[1.75rem] border border-white/10 bg-white/[0.04] min-h-[88px] md:min-h-[108px] flex items-center justify-center p-2 md:p-3 hover:bg-white/[0.08] hover:border-cyan-300/30 transition">
+              <img src="https://i.ibb.co/k2jBRR0g/toshiba-brands.jpg" alt="Toshiba" className="h-14 md:h-20 w-auto max-w-full object-contain rounded-lg bg-white p-1.5" />
             </a>
           </div>
         </div>
