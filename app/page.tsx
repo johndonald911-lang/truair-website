@@ -18,8 +18,18 @@ export default function Home() {
             <a href="#featured" className="hover:text-cyan-300 transition">Featured</a>
             <a href="#reviews" className="hover:text-cyan-300 transition">Reviews</a>
             <a href="#contact" className="hover:text-cyan-300 transition">Contact</a>
-            <a href="https://www.facebook.com/Truairconditioning" target="_blank" rel="noreferrer" className="hover:text-cyan-300 inline-flex items-center gap-2 transition">Facebook</a>
-            <a href="https://www.instagram.com/truair_airconditioning" target="_blank" rel="noreferrer" className="hover:text-cyan-300 inline-flex items-center gap-2 transition">Instagram</a>
+            <a href="https://www.facebook.com/Truairconditioning" target="_blank" rel="noreferrer" className="hover:text-cyan-300 inline-flex items-center gap-2 transition">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 text-white">
+                <path d="M22 12.07C22 6.477 17.523 2 12 2S2 6.477 2 12.07c0 5.056 3.657 9.247 8.438 10v-7.03H7.898v-2.97h2.54V9.845c0-2.522 1.492-3.916 3.777-3.916 1.094 0 2.238.198 2.238.198v2.476h-1.26c-1.243 0-1.63.775-1.63 1.57v1.887h2.773l-.443 2.97h-2.33v7.03C18.343 21.317 22 17.126 22 12.07z"/>
+              </svg>
+              <span>Facebook</span>
+            </a>
+            <a href="https://www.instagram.com/truair_airconditioning" target="_blank" rel="noreferrer" className="hover:text-cyan-300 inline-flex items-center gap-2 transition">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 text-white">
+                <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm8.5 1.8h-8.5A3.95 3.95 0 0 0 3.8 7.75v8.5a3.95 3.95 0 0 0 3.95 3.95h8.5a3.95 3.95 0 0 0 3.95-3.95v-8.5a3.95 3.95 0 0 0-3.95-3.95zM12 7.3A4.7 4.7 0 1 1 7.3 12 4.705 4.705 0 0 1 12 7.3zm0 1.8A2.9 2.9 0 1 0 14.9 12 2.903 2.903 0 0 0 12 9.1zm4.95-2.75a1.15 1.15 0 1 1-1.15 1.15 1.15 1.15 0 0 1 1.15-1.15z"/>
+              </svg>
+              <span>Instagram</span>
+            </a>
           </nav>
 
           <div className="flex items-center gap-3">
@@ -46,9 +56,21 @@ export default function Home() {
             <a href="#featured" onClick={() => setMenuOpen(false)} className="hover:text-cyan-300 transition">Featured</a>
             <a href="#reviews" onClick={() => setMenuOpen(false)} className="hover:text-cyan-300 transition">Reviews</a>
             <a href="#contact" onClick={() => setMenuOpen(false)} className="hover:text-cyan-300 transition">Contact</a>
-            <a href="https://www.facebook.com/Truairconditioning" target="_blank" rel="noreferrer" className="hover:text-cyan-300 transition">Facebook</a>
-            <a href="https://www.instagram.com/truair_airconditioning" target="_blank" rel="noreferrer" className="hover:text-cyan-300 transition">Instagram</a>
-            <a href="tel:0497878247" className="inline-flex w-full items-center justify-center bg-cyan-400 text-slate-950 px-5 py-3 rounded-2xl font-black shadow-[0_10px_40px_rgba(34,211,238,0.35)]">CALL NOW</a>
+            <a href="https://www.facebook.com/Truairconditioning" target="_blank" rel="noreferrer" className="hover:text-cyan-300 inline-flex items-center gap-2 transition">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 text-white">
+                <path d="M22 12.07C22 6.477 17.523 2 12 2S2 6.477 2 12.07c0 5.056 3.657 9.247 8.438 10v-7.03H7.898v-2.97h2.54V9.845c0-2.522 1.492-3.916 3.777-3.916 1.094 0 2.238.198 2.238.198v2.476h-1.26c-1.243 0-1.63.775-1.63 1.57v1.887h2.773l-.443 2.97h-2.33v7.03C18.343 21.317 22 17.126 22 12.07z"/>
+              </svg>
+              <span>Facebook</span>
+            </a>
+            <a href="https://www.instagram.com/truair_airconditioning" target="_blank" rel="noreferrer" className="hover:text-cyan-300 inline-flex items-center gap-2 transition">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 text-white">
+                <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm8.5 1.8h-8.5A3.95 3.95 0 0 0 3.8 7.75v8.5a3.95 3.95 0 0 0 3.95 3.95h8.5a3.95 3.95 0 0 0 3.95-3.95v-8.5a3.95 3.95 0 0 0-3.95-3.95zM12 7.3A4.7 4.7 0 1 1 7.3 12 4.705 4.705 0 0 1 12 7.3zm0 1.8A2.9 2.9 0 1 0 14.9 12 2.903 2.903 0 0 0 12 9.1zm4.95-2.75a1.15 1.15 0 1 1-1.15 1.15 1.15 1.15 0 0 1 1.15-1.15z"/>
+              </svg>
+              <span>Instagram</span>
+            </a>
+            <a href="tel:0497878247" className="inline-flex w-full items-center justify-center bg-cyan-400 text-slate-950 px-5 py-3 rounded-2xl font-black shadow-[0_10px_40px_rgba(34,211,238,0.35)]">
+              CALL NOW
+            </a>
           </div>
         )}
       </header>
@@ -57,12 +79,22 @@ export default function Home() {
         <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:48px_48px]" />
         <div className="relative max-w-7xl mx-auto px-6 py-14 md:py-24 grid lg:grid-cols-2 gap-10 md:gap-12 items-start lg:items-center">
           <div className="pt-2 md:pt-4">
-            <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 text-cyan-300 text-xs md:text-sm font-bold uppercase tracking-[0.25em] mb-6">Melbourne Heating &amp; Cooling Specialists</div>
-            <h1 className="text-4xl md:text-6xl xl:text-7xl font-black leading-[0.95] mb-5 max-w-3xl">Premium Installations. Done Properly.</h1>
-            <p className="text-base md:text-xl text-slate-300 mb-7 max-w-2xl leading-7 md:leading-8">High-end split systems, ducted air conditioning, multi-splits, servicing and repairs across Melbourne. Clean installs, quality brands, straight-up advice and proper after-sales support.</p>
+            <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 text-cyan-300 text-xs md:text-sm font-bold uppercase tracking-[0.25em] mb-6">
+              Melbourne Heating &amp; Cooling Specialists
+            </div>
+            <h1 className="text-4xl md:text-6xl xl:text-7xl font-black leading-[0.95] mb-5 max-w-3xl">
+              Premium Installations. Done Properly.
+            </h1>
+            <p className="text-base md:text-xl text-slate-300 mb-7 max-w-2xl leading-7 md:leading-8">
+              High-end split systems, ducted air conditioning, multi-splits, servicing and repairs across Melbourne. Clean installs, quality brands, straight-up advice and proper after-sales support.
+            </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <a href="tel:0497878247" className="bg-cyan-400 text-slate-950 px-7 py-4 rounded-2xl font-black text-base shadow-[0_12px_40px_rgba(34,211,238,0.35)] hover:scale-105 transition inline-flex items-center justify-center">Call 0497 878 247</a>
-              <a href="#contact" className="border border-white/20 bg-white/5 backdrop-blur px-7 py-4 rounded-2xl font-bold hover:bg-white/10 transition inline-flex items-center justify-center">Get Fast Quote</a>
+              <a href="tel:0497878247" className="bg-cyan-400 text-slate-950 px-7 py-4 rounded-2xl font-black text-base shadow-[0_12px_40px_rgba(34,211,238,0.35)] hover:scale-105 transition inline-flex items-center justify-center">
+                Call 0497 878 247
+              </a>
+              <a href="#contact" className="border border-white/20 bg-white/5 backdrop-blur px-7 py-4 rounded-2xl font-bold hover:bg-white/10 transition inline-flex items-center justify-center">
+                Get Fast Quote
+              </a>
             </div>
 
             <div className="mt-1 grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4 max-w-3xl">
@@ -108,7 +140,9 @@ export default function Home() {
                     <option>Rebate / VEU Job</option>
                   </select>
                   <textarea name="message" className="w-full border border-slate-200 rounded-2xl px-4 py-3.5 min-h-[110px] font-medium" placeholder="Tell us about the job..." />
-                  <button type="submit" className="w-full bg-slate-950 text-white py-3.5 rounded-2xl font-black tracking-wide hover:bg-slate-800 transition">GET MY QUOTE</button>
+                  <button type="submit" className="w-full bg-slate-950 text-white py-3.5 rounded-2xl font-black tracking-wide hover:bg-slate-800 transition">
+                    GET MY QUOTE
+                  </button>
                 </form>
               </div>
             </div>
@@ -118,12 +152,22 @@ export default function Home() {
 
       <section className="py-6 md:py-8 bg-[#0f172a] border-y border-white/10">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-5"><p className="uppercase tracking-[0.25em] text-slate-400 text-xs md:text-sm font-semibold">Trusted Brands We Install</p></div>
+          <div className="text-center mb-5">
+            <p className="uppercase tracking-[0.25em] text-slate-400 text-xs md:text-sm font-semibold">Trusted Brands We Install</p>
+          </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
-            <div className="rounded-3xl border border-white/10 bg-white/[0.04] min-h-[96px] md:min-h-[120px] flex items-center justify-center p-5"><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Fujitsu-Logo.svg" alt="Fujitsu" className="h-10 md:h-12 w-auto object-contain" /></div>
-            <div className="rounded-3xl border border-white/10 bg-white/[0.04] min-h-[96px] md:min-h-[120px] flex items-center justify-center p-5"><img src="https://acsisair.com.au/wp-content/uploads/2021/02/daikin-background-white.jpg" alt="Daikin" className="h-10 md:h-12 w-auto object-contain rounded-lg bg-white p-2" /></div>
-            <div className="rounded-3xl border border-white/10 bg-white/[0.04] min-h-[96px] md:min-h-[120px] flex items-center justify-center p-5"><img src="https://fallonsolutions.com.au/wp-content/uploads/2024/06/csm_Mitsubishi_Electric_18d7e03602.png" alt="Mitsubishi Electric" className="h-10 md:h-12 w-auto object-contain rounded-lg bg-white p-2" /></div>
-            <div className="rounded-3xl border border-white/10 bg-white/[0.04] min-h-[96px] md:min-h-[120px] flex items-center justify-center p-5"><div className="text-3xl md:text-4xl font-black tracking-wide text-red-500">TOSHIBA</div></div>
+            <a href="https://www.facebook.com/Truairconditioning" target="_blank" rel="noreferrer" className="rounded-3xl border border-white/10 bg-white/[0.04] min-h-[96px] md:min-h-[120px] flex items-center justify-center p-5 hover:bg-white/[0.08] hover:border-cyan-300/30 transition">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Fujitsu-Logo.svg" alt="Fujitsu" className="h-10 md:h-12 w-auto object-contain" />
+            </a>
+            <a href="https://www.facebook.com/Truairconditioning" target="_blank" rel="noreferrer" className="rounded-3xl border border-white/10 bg-white/[0.04] min-h-[96px] md:min-h-[120px] flex items-center justify-center p-5 hover:bg-white/[0.08] hover:border-cyan-300/30 transition">
+              <img src="https://acsisair.com.au/wp-content/uploads/2021/02/daikin-background-white.jpg" alt="Daikin" className="h-10 md:h-12 w-auto object-contain rounded-lg bg-white p-2" />
+            </a>
+            <a href="https://www.facebook.com/Truairconditioning" target="_blank" rel="noreferrer" className="rounded-3xl border border-white/10 bg-white/[0.04] min-h-[96px] md:min-h-[120px] flex items-center justify-center p-5 hover:bg-white/[0.08] hover:border-cyan-300/30 transition">
+              <img src="https://fallonsolutions.com.au/wp-content/uploads/2024/06/csm_Mitsubishi_Electric_18d7e03602.png" alt="Mitsubishi Electric" className="h-10 md:h-12 w-auto object-contain rounded-lg bg-white p-2" />
+            </a>
+            <a href="https://www.instagram.com/truair_airconditioning" target="_blank" rel="noreferrer" className="rounded-3xl border border-white/10 bg-white/[0.04] min-h-[96px] md:min-h-[120px] flex items-center justify-center p-5 hover:bg-white/[0.08] hover:border-cyan-300/30 transition">
+              <div className="text-3xl md:text-4xl font-black tracking-wide text-red-500">TOSHIBA</div>
+            </a>
           </div>
         </div>
       </section>
@@ -156,22 +200,32 @@ export default function Home() {
       </section>
 
       <section id="featured" className="py-16 md:py-20 bg-[#0f172a] border-y border-white/10">
-        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
-          <div className="grid gap-3 md:gap-4">
-            <div className="rounded-[2rem] overflow-hidden shadow-2xl border border-white/10 bg-white/5"><img src="https://img.hipages.com.au/unsafe/fit-in/1000x1000/smart/filters:fill(black)/https%3A%2F%2Fmediacache.homeimprovementpages.com.au%2Fcreative%2Fgalleries%2F2290001_2295000%2F2290474%2Foriginal_images%2F2557683.jpg" alt="Job 1" className="w-full h-[220px] md:h-[320px] object-cover" /></div>
-            <div className="grid grid-cols-2 gap-4">
-              <div className="rounded-[2rem] overflow-hidden shadow-xl border border-white/10 bg-white/5"><img src="https://img.hipages.com.au/unsafe/fit-in/1000x1000/smart/filters:fill(black)/https%3A%2F%2Fmediacache.homeimprovementpages.com.au%2Fcreative%2Fgalleries%2F2290001_2295000%2F2290474%2Foriginal_images%2F3702934.jpg" alt="Job 2" className="w-full h-[150px] md:h-[220px] object-cover" /></div>
-              <div className="rounded-[2rem] overflow-hidden shadow-xl border border-white/10 bg-white/5"><img src="https://img.hipages.com.au/unsafe/fit-in/1000x1000/smart/filters:fill(black)/https%3A%2F%2Fmediacache.homeimprovementpages.com.au%2Fcreative%2Fgalleries%2F2290001_2295000%2F2290474%2Foriginal_images%2F2557685.jpg" alt="Job 3" className="w-full h-[150px] md:h-[220px] object-cover" /></div>
-            </div>
-            <div className="grid grid-cols-2 gap-4">
-              <div className="rounded-[2rem] overflow-hidden shadow-xl border border-white/10 bg-white/5"><img src="https://img.hipages.com.au/unsafe/fit-in/1000x1000/smart/filters:fill(black)/https%3A%2F%2Fmediacache.homeimprovementpages.com.au%2Fcreative%2Fgalleries%2F2290001_2295000%2F2290474%2Foriginal_images%2F3702935.jpg" alt="Job 4" className="w-full h-[150px] md:h-[220px] object-cover" /></div>
-              <div className="rounded-[2rem] overflow-hidden shadow-xl border border-white/10 bg-white/5"><img src="https://img.hipages.com.au/unsafe/fit-in/1000x1000/smart/filters:fill(black)/https%3A%2F%2Fmediacache.homeimprovementpages.com.au%2Fcreative%2Fgalleries%2F2290001_2295000%2F2290474%2Foriginal_images%2F3702936.jpg" alt="Job 5" className="w-full h-[150px] md:h-[220px] object-cover" /></div>
-            </div>
-          </div>
-          <div>
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-10 md:mb-12">
             <p className="uppercase tracking-[0.25em] text-cyan-300 text-sm font-semibold">Quality Installations</p>
-            <h2 className="text-3xl md:text-5xl font-black mt-3 mb-6">Quality Installations. Done Right.</h2>
-            <p className="text-slate-400 text-lg leading-8 mb-6">A few recent TRUAIR installs showing the clean workmanship, proper placement and quality systems we’re known for across Melbourne.</p>
+            <h2 className="text-3xl md:text-5xl font-black mt-3 mb-4">Quality Installations. Done Right.</h2>
+            <p className="text-slate-400 text-lg leading-8 max-w-3xl mx-auto">A few recent TRUAIR installs showing the clean workmanship, proper placement and quality systems we’re known for across Melbourne.</p>
+          </div>
+
+          <div className="grid lg:grid-cols-[1.35fr_1fr] gap-4 md:gap-5 items-stretch">
+            <a href="https://img.hipages.com.au/unsafe/fit-in/1000x1000/smart/filters:fill(black)/https%3A%2F%2Fmediacache.homeimprovementpages.com.au%2Fcreative%2Fgalleries%2F2290001_2295000%2F2290474%2Foriginal_images%2F2557683.jpg" target="_blank" rel="noreferrer" className="rounded-[2rem] overflow-hidden shadow-2xl border border-white/10 block h-full min-h-[340px] md:min-h-[520px] bg-[#0b1220] cursor-zoom-in">
+              <img src="https://img.hipages.com.au/unsafe/fit-in/1000x1000/smart/filters:fill(black)/https%3A%2F%2Fmediacache.homeimprovementpages.com.au%2Fcreative%2Fgalleries%2F2290001_2295000%2F2290474%2Foriginal_images%2F2557683.jpg" alt="TRUAIR installation 1" className="w-full h-full min-h-[340px] md:min-h-[520px] object-cover object-center scale-[1.9] block bg-[#0b1220] hover:scale-[1.95] transition duration-300" />
+            </a>
+
+            <div className="grid grid-cols-2 gap-4 md:gap-5">
+              <a href="https://img.hipages.com.au/unsafe/fit-in/1000x1000/smart/filters:fill(black)/https%3A%2F%2Fmediacache.homeimprovementpages.com.au%2Fcreative%2Fgalleries%2F2290001_2295000%2F2290474%2Foriginal_images%2F3702934.jpg" target="_blank" rel="noreferrer" className="rounded-[2rem] overflow-hidden shadow-xl border border-white/10 block min-h-[165px] md:min-h-[248px] bg-[#0b1220] cursor-zoom-in">
+                <img src="https://img.hipages.com.au/unsafe/fit-in/1000x1000/smart/filters:fill(black)/https%3A%2F%2Fmediacache.homeimprovementpages.com.au%2Fcreative%2Fgalleries%2F2290001_2295000%2F2290474%2Foriginal_images%2F3702934.jpg" alt="TRUAIR installation 2" className="w-full h-full min-h-[165px] md:min-h-[248px] object-cover object-center scale-[1.55] block bg-[#0b1220] hover:scale-[1.6] transition duration-300" />
+              </a>
+              <a href="https://img.hipages.com.au/unsafe/fit-in/1000x1000/smart/filters:fill(black)/https%3A%2F%2Fmediacache.homeimprovementpages.com.au%2Fcreative%2Fgalleries%2F2290001_2295000%2F2290474%2Foriginal_images%2F2557685.jpg" target="_blank" rel="noreferrer" className="rounded-[2rem] overflow-hidden shadow-xl border border-white/10 block min-h-[165px] md:min-h-[248px] bg-[#0b1220] cursor-zoom-in">
+                <img src="https://img.hipages.com.au/unsafe/fit-in/1000x1000/smart/filters:fill(black)/https%3A%2F%2Fmediacache.homeimprovementpages.com.au%2Fcreative%2Fgalleries%2F2290001_2295000%2F2290474%2Foriginal_images%2F2557685.jpg" alt="TRUAIR installation 3" className="w-full h-full min-h-[165px] md:min-h-[248px] object-cover object-center scale-[1.55] block bg-[#0b1220] hover:scale-[1.6] transition duration-300" />
+              </a>
+              <a href="https://img.hipages.com.au/unsafe/fit-in/1000x1000/smart/filters:fill(black)/https%3A%2F%2Fmediacache.homeimprovementpages.com.au%2Fcreative%2Fgalleries%2F2290001_2295000%2F2290474%2Foriginal_images%2F3702935.jpg" target="_blank" rel="noreferrer" className="rounded-[2rem] overflow-hidden shadow-xl border border-white/10 block min-h-[165px] md:min-h-[248px] bg-[#0b1220] cursor-zoom-in">
+                <img src="https://img.hipages.com.au/unsafe/fit-in/1000x1000/smart/filters:fill(black)/https%3A%2F%2Fmediacache.homeimprovementpages.com.au%2Fcreative%2Fgalleries%2F2290001_2295000%2F2290474%2Foriginal_images%2F3702935.jpg" alt="TRUAIR installation 4" className="w-full h-full min-h-[165px] md:min-h-[248px] object-cover object-center scale-[1.55] block bg-[#0b1220] hover:scale-[1.6] transition duration-300" />
+              </a>
+              <a href="https://img.hipages.com.au/unsafe/fit-in/1000x1000/smart/filters:fill(black)/https%3A%2F%2Fmediacache.homeimprovementpages.com.au%2Fcreative%2Fgalleries%2F2290001_2295000%2F2290474%2Foriginal_images%2F3702936.jpg" target="_blank" rel="noreferrer" className="rounded-[2rem] overflow-hidden shadow-xl border border-white/10 block min-h-[165px] md:min-h-[248px] bg-[#0b1220] cursor-zoom-in">
+                <img src="https://img.hipages.com.au/unsafe/fit-in/1000x1000/smart/filters:fill(black)/https%3A%2F%2Fmediacache.homeimprovementpages.com.au%2Fcreative%2Fgalleries%2F2290001_2295000%2F2290474%2Foriginal_images%2F3702936.jpg" alt="TRUAIR installation 5" className="w-full h-full min-h-[165px] md:min-h-[248px] object-cover object-center scale-[1.55] block bg-[#0b1220] hover:scale-[1.6] transition duration-300" />
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -196,20 +250,40 @@ export default function Home() {
       <section id="contact" className="py-16 md:py-24 bg-[radial-gradient(circle_at_bottom_left,_rgba(34,211,238,0.10),_transparent_35%),#06101f] border-t border-white/10">
         <div className="max-w-6xl mx-auto px-6">
           <div className="rounded-[2.5rem] border border-white/10 bg-white/[0.03] backdrop-blur-xl p-6 md:p-14 shadow-2xl text-center">
-            <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 text-cyan-300 text-xs md:text-sm font-bold uppercase tracking-[0.25em] mb-6">Ready To Book?</div>
-            <h2 className="text-3xl md:text-7xl font-black leading-[0.95] md:leading-[0.92] mb-4 md:mb-5 max-w-5xl mx-auto">Need A Quote On A New System?</h2>
-            <p className="text-slate-400 text-base md:text-2xl mb-8 md:mb-10 max-w-4xl mx-auto leading-7 md:leading-relaxed">Get in touch for a fast quote on split systems, ducted installs, servicing and repairs across Melbourne.</p>
+            <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 text-cyan-300 text-xs md:text-sm font-bold uppercase tracking-[0.25em] mb-6">
+              Ready To Book?
+            </div>
+            <h2 className="text-3xl md:text-7xl font-black leading-[0.95] md:leading-[0.92] mb-4 md:mb-5 max-w-5xl mx-auto">
+              Need A Quote On A New System?
+            </h2>
+            <p className="text-slate-400 text-base md:text-2xl mb-8 md:mb-10 max-w-4xl mx-auto leading-7 md:leading-relaxed">
+              Get in touch for a fast quote on split systems, ducted installs, servicing and repairs across Melbourne.
+            </p>
 
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8 md:mb-10">
-              <a href="tel:0497878247" className="bg-cyan-400 text-slate-950 px-8 md:px-10 py-4 rounded-2xl font-black text-lg shadow-[0_12px_40px_rgba(34,211,238,0.35)] hover:scale-[1.02] transition">Call Now: 0497 878 247</a>
-              <a href="mailto:john@truair.com.au" className="border border-white/15 bg-white/[0.04] px-8 md:px-10 py-4 rounded-2xl font-bold text-lg hover:bg-white/[0.07] transition">Email Us</a>
+              <a href="tel:0497878247" className="bg-cyan-400 text-slate-950 px-8 md:px-10 py-4 rounded-2xl font-black text-lg shadow-[0_12px_40px_rgba(34,211,238,0.35)] hover:scale-[1.02] transition">
+                Call Now: 0497 878 247
+              </a>
+              <a href="mailto:john@truair.com.au" className="border border-white/15 bg-white/[0.04] px-8 md:px-10 py-4 rounded-2xl font-bold text-lg hover:bg-white/[0.07] transition">
+                Email Us
+              </a>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 max-w-6xl mx-auto">
               <a href="tel:0497878247" className="rounded-2xl border border-white/10 bg-white/[0.04] hover:bg-white/[0.06] transition px-5 py-5 md:px-6 md:py-6 text-slate-200 font-medium inline-flex items-center justify-center gap-3"><span>📞</span><span>0497 878 247</span></a>
               <a href="mailto:john@truair.com.au" className="rounded-2xl border border-white/10 bg-white/[0.04] hover:bg-white/[0.06] transition px-5 py-5 md:px-6 md:py-6 text-slate-200 font-medium inline-flex items-center justify-center gap-3"><span>✉️</span><span>john@truair.com.au</span></a>
-              <a href="https://www.facebook.com/Truairconditioning" target="_blank" rel="noreferrer" className="rounded-2xl border border-white/10 bg-white/[0.04] hover:bg-white/[0.06] transition px-5 py-5 md:px-6 md:py-6 text-slate-200 font-medium inline-flex items-center justify-center gap-3"><span>Facebook</span></a>
-              <a href="https://www.instagram.com/truair_airconditioning" target="_blank" rel="noreferrer" className="rounded-2xl border border-white/10 bg-white/[0.04] hover:bg-white/[0.06] transition px-5 py-5 md:px-6 md:py-6 text-slate-200 font-medium inline-flex items-center justify-center gap-3"><span>Instagram</span></a>
+              <a href="https://www.facebook.com/Truairconditioning" target="_blank" rel="noreferrer" className="rounded-2xl border border-white/10 bg-white/[0.04] hover:bg-white/[0.06] transition px-5 py-5 md:px-6 md:py-6 text-slate-200 font-medium inline-flex items-center justify-center gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 text-white">
+                  <path d="M22 12.07C22 6.477 17.523 2 12 2S2 6.477 2 12.07c0 5.056 3.657 9.247 8.438 10v-7.03H7.898v-2.97h2.54V9.845c0-2.522 1.492-3.916 3.777-3.916 1.094 0 2.238.198 2.238.198v2.476h-1.26c-1.243 0-1.63.775-1.63 1.57v1.887h2.773l-.443 2.97h-2.33v7.03C18.343 21.317 22 17.126 22 12.07z"/>
+                </svg>
+                <span>Facebook</span>
+              </a>
+              <a href="https://www.instagram.com/truair_airconditioning" target="_blank" rel="noreferrer" className="rounded-2xl border border-white/10 bg-white/[0.04] hover:bg-white/[0.06] transition px-5 py-5 md:px-6 md:py-6 text-slate-200 font-medium inline-flex items-center justify-center gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 text-white">
+                  <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm8.5 1.8h-8.5A3.95 3.95 0 0 0 3.8 7.75v8.5a3.95 3.95 0 0 0 3.95 3.95h8.5a3.95 3.95 0 0 0 3.95-3.95v-8.5a3.95 3.95 0 0 0-3.95-3.95zM12 7.3A4.7 4.7 0 1 1 7.3 12 4.705 4.705 0 0 1 12 7.3zm0 1.8A2.9 2.9 0 1 0 14.9 12 2.903 2.903 0 0 0 12 9.1zm4.95-2.75a1.15 1.15 0 1 1-1.15 1.15 1.15 1.15 0 0 1 1.15-1.15z"/>
+                </svg>
+                <span>Instagram</span>
+              </a>
             </div>
           </div>
         </div>
@@ -218,12 +292,26 @@ export default function Home() {
       <footer className="bg-black text-white py-6 md:py-10 border-t border-white/10">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-            <div className="flex justify-center md:justify-start"><img src="https://iili.io/qMB2l3l.png" alt="TRUAIR" className="h-10 md:h-12 w-auto object-contain" /></div>
+            <div className="flex justify-center md:justify-start">
+              <img src="https://iili.io/qMB2l3l.png" alt="TRUAIR" className="h-10 md:h-12 w-auto object-contain" />
+            </div>
             <div className="flex-1 flex flex-col md:items-end items-center gap-3 text-center md:text-right">
-              <div className="text-slate-400 text-sm md:text-base leading-relaxed max-w-4xl">TRUAIR PTY LTD • ABN 75 628 083 018 • Melbourne Heating &amp; Cooling Specialists • Premium installations done properly</div>
+              <div className="text-slate-400 text-sm md:text-base leading-relaxed max-w-4xl">
+                TRUAIR PTY LTD • ABN 75 628 083 018 • Melbourne Heating &amp; Cooling Specialists • Premium installations done properly
+              </div>
               <div className="flex items-center justify-center md:justify-end gap-6 flex-wrap text-slate-300 text-sm md:text-base">
-                <a href="https://www.facebook.com/Truairconditioning" target="_blank" rel="noreferrer" className="hover:text-cyan-300 inline-flex items-center gap-2 transition"><span>Facebook</span></a>
-                <a href="https://www.instagram.com/truair_airconditioning" target="_blank" rel="noreferrer" className="hover:text-cyan-300 inline-flex items-center gap-2 transition"><span>Instagram</span></a>
+                <a href="https://www.facebook.com/Truairconditioning" target="_blank" rel="noreferrer" className="hover:text-cyan-300 inline-flex items-center gap-2 transition">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 text-white">
+                    <path d="M22 12.07C22 6.477 17.523 2 12 2S2 6.477 2 12.07c0 5.056 3.657 9.247 8.438 10v-7.03H7.898v-2.97h2.54V9.845c0-2.522 1.492-3.916 3.777-3.916 1.094 0 2.238.198 2.238.198v2.476h-1.26c-1.243 0-1.63.775-1.63 1.57v1.887h2.773l-.443 2.97h-2.33v7.03C18.343 21.317 22 17.126 22 12.07z"/>
+                  </svg>
+                  <span>Facebook</span>
+                </a>
+                <a href="https://www.instagram.com/truair_airconditioning" target="_blank" rel="noreferrer" className="hover:text-cyan-300 inline-flex items-center gap-2 transition">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 text-white">
+                    <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm8.5 1.8h-8.5A3.95 3.95 0 0 0 3.8 7.75v8.5a3.95 3.95 0 0 0 3.95 3.95h8.5a3.95 3.95 0 0 0 3.95-3.95v-8.5a3.95 3.95 0 0 0-3.95-3.95zM12 7.3A4.7 4.7 0 1 1 7.3 12 4.705 4.705 0 0 1 12 7.3zm0 1.8A2.9 2.9 0 1 0 14.9 12 2.903 2.903 0 0 0 12 9.1zm4.95-2.75a1.15 1.15 0 1 1-1.15 1.15 1.15 1.15 0 0 1 1.15-1.15z"/>
+                  </svg>
+                  <span>Instagram</span>
+                </a>
               </div>
             </div>
           </div>
@@ -231,7 +319,9 @@ export default function Home() {
       </footer>
 
       <div className="fixed bottom-4 left-4 right-4 md:hidden z-50">
-        <a href="tel:0497878247" className="w-full bg-cyan-400 text-slate-950 py-4 rounded-2xl font-black shadow-2xl flex items-center justify-center text-lg gap-2">CALL NOW • 0497 878 247</a>
+        <a href="tel:0497878247" className="w-full bg-cyan-400 text-slate-950 py-4 rounded-2xl font-black shadow-2xl flex items-center justify-center text-lg gap-2">
+          CALL NOW • 0497 878 247
+        </a>
       </div>
     </main>
   );
