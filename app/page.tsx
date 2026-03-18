@@ -1,9 +1,46 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined' && !submitted) {
+      const params = new URLSearchParams(window.location.search);
+      setSubmitted(params.get('submitted') === '1');
+    }
+  }, [submitted]);
+
+  if (submitted) {
+    return (
+      <main className="min-h-screen bg-[radial-gradient(circle_at_top_right,_rgba(34,211,238,0.18),_transparent_35%),linear-gradient(135deg,#0b1220_0%,#0f172a_40%,#0c4a6e_100%)] text-white flex items-center justify-center px-6 py-10">
+        <div className="w-full max-w-3xl">
+          <div className="rounded-[2.5rem] border border-white/10 bg-white/[0.05] backdrop-blur-2xl shadow-2xl p-6 md:p-12 text-center">
+            <div className="flex justify-center mb-8">
+              <img src="https://iili.io/qMB2l3l.png" alt="TRUAIR" className="h-20 md:h-28 w-auto object-contain drop-shadow-2xl" />
+            </div>
+            <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 text-cyan-300 text-xs md:text-sm font-bold uppercase tracking-[0.25em] mb-6">
+              Enquiry Received
+            </div>
+            <h1 className="text-4xl md:text-6xl font-black leading-[0.95] mb-5">Thanks for your enquiry</h1>
+            <p className="text-slate-300 text-lg md:text-2xl leading-8 max-w-2xl mx-auto mb-8">
+              We’ve received your message and will get back to you ASAP.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="tel:0497878247" className="bg-cyan-400 text-slate-950 px-8 py-4 rounded-2xl font-black text-lg shadow-[0_12px_40px_rgba(34,211,238,0.35)] hover:scale-[1.02] transition inline-flex items-center justify-center">
+                Call 0497 878 247
+              </a>
+              <a href="/" className="border border-white/20 bg-white/5 backdrop-blur px-8 py-4 rounded-2xl font-bold text-lg hover:bg-white/10 transition inline-flex items-center justify-center">
+                Back To Home
+              </a>
+            </div>
+          </div>
+        </div>
+      </main>
+    );
+  }
 
   return (
     <main className="min-h-screen bg-[#0b1220] text-white">
@@ -99,15 +136,15 @@ export default function Home() {
 
             <div className="mt-1 grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4 max-w-3xl">
               <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-4 min-h-[104px] backdrop-blur flex flex-col items-center justify-center text-center gap-2.5">
-                <img src="https://wp.logos-download.com/wp-content/uploads/2024/03/Australian_Refrigeration_Council_Logo.png?dl" alt="ARCTick Certified" className="h-9 w-auto max-w-[140px] object-contain rounded-lg bg-white p-1" />
+                <img src="https://wp.logos-download.com/wp-content/uploads/2024/03/Australian_Refrigeration_Council_Logo.png?dl" alt="ARCTick Certified" className="h-11 w-auto max-w-[160px] object-contain rounded-lg bg-white p-1" />
                 <span className="text-xs md:text-sm font-semibold text-slate-200 leading-tight">ARCTick Certified</span>
               </div>
               <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-4 min-h-[104px] backdrop-blur flex flex-col items-center justify-center text-center gap-2.5">
-                <img src="https://cdn.brandfetch.io/id0jhLAycb/theme/dark/logo.svg?c=1dxbfHSJFAPEGdCLU4o5B" alt="BPC Licensed" className="h-9 w-auto max-w-[70px] object-contain rounded-lg bg-white p-2" />
+                <img src="https://cdn.brandfetch.io/id0jhLAycb/theme/dark/logo.svg?c=1dxbfHSJFAPEGdCLU4o5B" alt="BPC Licensed" className="h-11 w-auto max-w-[82px] object-contain rounded-lg bg-white p-2" />
                 <span className="text-xs md:text-sm font-semibold text-slate-200 leading-tight">BPC Licensed</span>
               </div>
               <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-4 min-h-[104px] backdrop-blur flex flex-col items-center justify-center text-center gap-2.5">
-                <img src="https://discover.data.vic.gov.au/uploads/group/2025-05-23-064053.1567952025-05-23-064052.720263EnergySafeVictoria.jpg" alt="Energy Safe Victoria" className="h-9 w-auto max-w-[110px] object-contain rounded-lg bg-white p-1" />
+                <img src="https://discover.data.vic.gov.au/uploads/group/2025-05-23-064053.1567952025-05-23-064052.720263EnergySafeVictoria.jpg" alt="Energy Safe Victoria" className="h-11 w-auto max-w-[128px] object-contain rounded-lg bg-white p-1" />
                 <span className="text-xs md:text-sm font-semibold text-slate-200 leading-tight">Energy Safe Victoria</span>
               </div>
             </div>
@@ -128,7 +165,7 @@ export default function Home() {
                   <input type="hidden" name="_subject" value="New TRUAIR Website Lead" />
                   <input type="hidden" name="_captcha" value="false" />
                   <input type="hidden" name="_template" value="table" />
-                  <input type="hidden" name="_next" value="https://truair.com.au/" />
+                  <input type="hidden" name="_next" value="https://truair.com.au/?submitted=1" />
                   <input name="name" required className="w-full border border-slate-200 rounded-2xl px-4 py-3.5 font-medium" placeholder="Your Name" />
                   <input name="phone" required className="w-full border border-slate-200 rounded-2xl px-4 py-3.5 font-medium" placeholder="Phone Number" />
                   <input name="suburb" className="w-full border border-slate-200 rounded-2xl px-4 py-3.5 font-medium" placeholder="Suburb" />
