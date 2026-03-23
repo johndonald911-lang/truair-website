@@ -2,9 +2,11 @@
 
 import { useEffect, useState } from 'react';
 
+
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [selectedService, setSelectedService] = useState('Split System Installation');
 
   useEffect(() => {
     if (typeof window !== 'undefined' && !submitted) {
@@ -12,6 +14,7 @@ export default function Home() {
       setSubmitted(params.get('submitted') === '1');
     }
   }, [submitted]);
+
 
   if (submitted) {
     return (
@@ -140,7 +143,7 @@ export default function Home() {
                 <span className="text-xs md:text-sm font-semibold text-slate-200 leading-tight">ARCTick Certified</span>
               </div>
               <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-4 min-h-[104px] backdrop-blur flex flex-col items-center justify-center text-center gap-2.5">
-                <img src="https://cdn.brandfetch.io/id0jhLAycb/theme/dark/logo.svg?c=1dxbfHSJFAPEGdCLU4o5B" alt="BPC Licensed" className="h-11 w-auto max-w-[82px] object-contain rounded-lg bg-white p-2" />
+                <img src="https://i.ibb.co/FkxfbYf8/BPC.png" alt="BPC Licensed" className="h-11 w-auto max-w-[82px] object-contain rounded-lg bg-white p-2" />
                 <span className="text-xs md:text-sm font-semibold text-slate-200 leading-tight">BPC Licensed</span>
               </div>
               <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-4 min-h-[104px] backdrop-blur flex flex-col items-center justify-center text-center gap-2.5">
@@ -169,12 +172,45 @@ export default function Home() {
                   <input name="name" required className="w-full border border-slate-200 rounded-2xl px-4 py-3.5 font-medium" placeholder="Your Name" />
                   <input name="phone" required className="w-full border border-slate-200 rounded-2xl px-4 py-3.5 font-medium" placeholder="Phone Number" />
                   <input name="suburb" className="w-full border border-slate-200 rounded-2xl px-4 py-3.5 font-medium" placeholder="Suburb" />
-                  <select name="service" className="w-full border border-slate-200 rounded-2xl px-4 py-3.5 font-medium">
+                  <select name="propertyType" className="w-full border border-slate-200 rounded-2xl px-4 py-3.5 font-medium">
+                    <option value="">Property Type</option>
+                    <option>Single Storey House</option>
+                    <option>Double Storey House</option>
+                    <option>Townhouse</option>
+                    <option>Apartment / Unit</option>
+                    <option>Office / Shop</option>
+                    <option>Other</option>
+                  </select>
+                  <select
+                    name="service"
+                    value={selectedService}
+                    onChange={(e) => setSelectedService(e.target.value)}
+                    className="w-full border border-slate-200 rounded-2xl px-4 py-3.5 font-medium"
+                  >
                     <option>Split System Installation</option>
                     <option>Ducted Air Conditioning</option>
                     <option>Service / Repair</option>
                     <option>Multi Split System</option>
                     <option>Rebate / VEU Job</option>
+                  </select>
+                  <select name="jobType" className="w-full border border-slate-200 rounded-2xl px-4 py-3.5 font-medium">
+                    <option value="">Job Type</option>
+                    {selectedService === 'Ducted Air Conditioning' ? (
+                      <>
+                        <option>New Install</option>
+                        <option>Replacement Unit</option>
+                        <option>New Build / Renovation</option>
+                        <option>Service / Repair</option>
+                      </>
+                    ) : (
+                      <>
+                        <option>Back to Back Install</option>
+                        <option>Non Back to Back Install</option>
+                        <option>Replacement Unit</option>
+                        <option>New Build / Renovation</option>
+                        <option>Service / Repair</option>
+                      </>
+                    )}
                   </select>
                   <textarea name="message" className="w-full border border-slate-200 rounded-2xl px-4 py-3.5 min-h-[110px] font-medium" placeholder="Tell us about the job..." />
                   <button type="submit" className="w-full bg-slate-950 text-white py-3.5 rounded-2xl font-black tracking-wide hover:bg-slate-800 transition">
@@ -250,25 +286,49 @@ export default function Home() {
             <p className="text-slate-400 text-lg leading-8 max-w-3xl mx-auto">A few recent TRUAIR installs showing the clean workmanship, proper placement and quality systems we’re known for across Melbourne.</p>
           </div>
 
-          <div className="grid lg:grid-cols-[1.35fr_1fr] gap-4 md:gap-5 items-stretch">
-            <a href="https://img.hipages.com.au/unsafe/fit-in/1000x1000/smart/filters:fill(black)/https%3A%2F%2Fmediacache.homeimprovementpages.com.au%2Fcreative%2Fgalleries%2F2290001_2295000%2F2290474%2Foriginal_images%2F2557683.jpg" target="_blank" rel="noreferrer" className="rounded-[2rem] overflow-hidden shadow-2xl border border-white/10 block h-full min-h-[340px] md:min-h-[520px] bg-[#0b1220] cursor-zoom-in">
-              <img src="https://img.hipages.com.au/unsafe/fit-in/1000x1000/smart/filters:fill(black)/https%3A%2F%2Fmediacache.homeimprovementpages.com.au%2Fcreative%2Fgalleries%2F2290001_2295000%2F2290474%2Foriginal_images%2F2557683.jpg" alt="TRUAIR installation 1" className="w-full h-full min-h-[340px] md:min-h-[520px] object-cover object-center scale-[1.9] block bg-[#0b1220] hover:scale-[1.95] transition duration-300" />
+          <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 md:gap-5 [column-fill:_balance]">
+            <a href="https://i.ibb.co/PGccD4Mn/Screenshot-2026-03-23-212525.png" target="_blank" rel="noreferrer" className="mb-4 md:mb-5 break-inside-avoid block rounded-[2rem] overflow-hidden shadow-2xl border border-white/10 bg-[#0b1220] cursor-zoom-in">
+              <img src="https://i.ibb.co/PGccD4Mn/Screenshot-2026-03-23-212525.png" alt="TRUAIR job 1" className="w-full h-auto block hover:scale-[1.02] transition duration-300" />
             </a>
-
-            <div className="grid grid-cols-2 gap-4 md:gap-5">
-              <a href="https://img.hipages.com.au/unsafe/fit-in/1000x1000/smart/filters:fill(black)/https%3A%2F%2Fmediacache.homeimprovementpages.com.au%2Fcreative%2Fgalleries%2F2290001_2295000%2F2290474%2Foriginal_images%2F3702934.jpg" target="_blank" rel="noreferrer" className="rounded-[2rem] overflow-hidden shadow-xl border border-white/10 block min-h-[165px] md:min-h-[248px] bg-[#0b1220] cursor-zoom-in">
-                <img src="https://img.hipages.com.au/unsafe/fit-in/1000x1000/smart/filters:fill(black)/https%3A%2F%2Fmediacache.homeimprovementpages.com.au%2Fcreative%2Fgalleries%2F2290001_2295000%2F2290474%2Foriginal_images%2F3702934.jpg" alt="TRUAIR installation 2" className="w-full h-full min-h-[165px] md:min-h-[248px] object-cover object-center scale-[1.55] block bg-[#0b1220] hover:scale-[1.6] transition duration-300" />
-              </a>
-              <a href="https://img.hipages.com.au/unsafe/fit-in/1000x1000/smart/filters:fill(black)/https%3A%2F%2Fmediacache.homeimprovementpages.com.au%2Fcreative%2Fgalleries%2F2290001_2295000%2F2290474%2Foriginal_images%2F2557685.jpg" target="_blank" rel="noreferrer" className="rounded-[2rem] overflow-hidden shadow-xl border border-white/10 block min-h-[165px] md:min-h-[248px] bg-[#0b1220] cursor-zoom-in">
-                <img src="https://img.hipages.com.au/unsafe/fit-in/1000x1000/smart/filters:fill(black)/https%3A%2F%2Fmediacache.homeimprovementpages.com.au%2Fcreative%2Fgalleries%2F2290001_2295000%2F2290474%2Foriginal_images%2F2557685.jpg" alt="TRUAIR installation 3" className="w-full h-full min-h-[165px] md:min-h-[248px] object-cover object-center scale-[1.55] block bg-[#0b1220] hover:scale-[1.6] transition duration-300" />
-              </a>
-              <a href="https://img.hipages.com.au/unsafe/fit-in/1000x1000/smart/filters:fill(black)/https%3A%2F%2Fmediacache.homeimprovementpages.com.au%2Fcreative%2Fgalleries%2F2290001_2295000%2F2290474%2Foriginal_images%2F3702935.jpg" target="_blank" rel="noreferrer" className="rounded-[2rem] overflow-hidden shadow-xl border border-white/10 block min-h-[165px] md:min-h-[248px] bg-[#0b1220] cursor-zoom-in">
-                <img src="https://img.hipages.com.au/unsafe/fit-in/1000x1000/smart/filters:fill(black)/https%3A%2F%2Fmediacache.homeimprovementpages.com.au%2Fcreative%2Fgalleries%2F2290001_2295000%2F2290474%2Foriginal_images%2F3702935.jpg" alt="TRUAIR installation 4" className="w-full h-full min-h-[165px] md:min-h-[248px] object-cover object-center scale-[1.55] block bg-[#0b1220] hover:scale-[1.6] transition duration-300" />
-              </a>
-              <a href="https://img.hipages.com.au/unsafe/fit-in/1000x1000/smart/filters:fill(black)/https%3A%2F%2Fmediacache.homeimprovementpages.com.au%2Fcreative%2Fgalleries%2F2290001_2295000%2F2290474%2Foriginal_images%2F3702936.jpg" target="_blank" rel="noreferrer" className="rounded-[2rem] overflow-hidden shadow-xl border border-white/10 block min-h-[165px] md:min-h-[248px] bg-[#0b1220] cursor-zoom-in">
-                <img src="https://img.hipages.com.au/unsafe/fit-in/1000x1000/smart/filters:fill(black)/https%3A%2F%2Fmediacache.homeimprovementpages.com.au%2Fcreative%2Fgalleries%2F2290001_2295000%2F2290474%2Foriginal_images%2F3702936.jpg" alt="TRUAIR installation 5" className="w-full h-full min-h-[165px] md:min-h-[248px] object-cover object-center scale-[1.55] block bg-[#0b1220] hover:scale-[1.6] transition duration-300" />
-              </a>
-            </div>
+            <a href="https://i.ibb.co/Qj8fFcBD/Screenshot-2026-03-23-212632.png" target="_blank" rel="noreferrer" className="mb-4 md:mb-5 break-inside-avoid block rounded-[2rem] overflow-hidden shadow-xl border border-white/10 bg-[#0b1220] cursor-zoom-in">
+              <img src="https://i.ibb.co/Qj8fFcBD/Screenshot-2026-03-23-212632.png" alt="TRUAIR job 2" className="w-full h-auto block hover:scale-[1.02] transition duration-300" />
+            </a>
+            <a href="https://i.ibb.co/S41VcWfQ/Screenshot-2026-03-23-212711.png" target="_blank" rel="noreferrer" className="mb-4 md:mb-5 break-inside-avoid block rounded-[2rem] overflow-hidden shadow-xl border border-white/10 bg-[#0b1220] cursor-zoom-in">
+              <img src="https://i.ibb.co/S41VcWfQ/Screenshot-2026-03-23-212711.png" alt="TRUAIR job 3" className="w-full h-auto block hover:scale-[1.02] transition duration-300" />
+            </a>
+            <a href="https://i.ibb.co/Q7FWtr71/Screenshot-2026-03-23-212741.png" target="_blank" rel="noreferrer" className="mb-4 md:mb-5 break-inside-avoid block rounded-[2rem] overflow-hidden shadow-xl border border-white/10 bg-[#0b1220] cursor-zoom-in">
+              <img src="https://i.ibb.co/Q7FWtr71/Screenshot-2026-03-23-212741.png" alt="TRUAIR job 4" className="w-full h-auto block hover:scale-[1.02] transition duration-300" />
+            </a>
+            <a href="https://i.ibb.co/MyWcsbvZ/Screenshot-2026-03-23-212758.png" target="_blank" rel="noreferrer" className="mb-4 md:mb-5 break-inside-avoid block rounded-[2rem] overflow-hidden shadow-xl border border-white/10 bg-[#0b1220] cursor-zoom-in">
+              <img src="https://i.ibb.co/MyWcsbvZ/Screenshot-2026-03-23-212758.png" alt="TRUAIR job 5" className="w-full h-auto block hover:scale-[1.02] transition duration-300" />
+            </a>
+            <a href="https://i.ibb.co/840q1cnJ/Screenshot-2026-03-23-212858.png" target="_blank" rel="noreferrer" className="mb-4 md:mb-5 break-inside-avoid block rounded-[2rem] overflow-hidden shadow-xl border border-white/10 bg-[#0b1220] cursor-zoom-in">
+              <img src="https://i.ibb.co/840q1cnJ/Screenshot-2026-03-23-212858.png" alt="TRUAIR job 6" className="w-full h-auto block hover:scale-[1.02] transition duration-300" />
+            </a>
+            <a href="https://i.ibb.co/dsm3Kq5h/Screenshot-2026-03-23-212940.png" target="_blank" rel="noreferrer" className="mb-4 md:mb-5 break-inside-avoid block rounded-[2rem] overflow-hidden shadow-xl border border-white/10 bg-[#0b1220] cursor-zoom-in">
+              <img src="https://i.ibb.co/dsm3Kq5h/Screenshot-2026-03-23-212940.png" alt="TRUAIR job 7" className="w-full h-auto block hover:scale-[1.02] transition duration-300" />
+            </a>
+            <a href="https://i.ibb.co/v65FvqXM/Screenshot-2026-03-23-213058.png" target="_blank" rel="noreferrer" className="mb-4 md:mb-5 break-inside-avoid block rounded-[2rem] overflow-hidden shadow-xl border border-white/10 bg-[#0b1220] cursor-zoom-in">
+              <img src="https://i.ibb.co/v65FvqXM/Screenshot-2026-03-23-213058.png" alt="TRUAIR job 8" className="w-full h-auto block hover:scale-[1.02] transition duration-300" />
+            </a>
+            <a href="https://i.ibb.co/67fZ9C6K/Screenshot-2026-03-23-213804.png" target="_blank" rel="noreferrer" className="mb-4 md:mb-5 break-inside-avoid block rounded-[2rem] overflow-hidden shadow-xl border border-white/10 bg-[#0b1220] cursor-zoom-in">
+              <img src="https://i.ibb.co/67fZ9C6K/Screenshot-2026-03-23-213804.png" alt="TRUAIR job 9" className="w-full h-auto block hover:scale-[1.02] transition duration-300" />
+            </a>
+            <a href="https://i.ibb.co/pBJ4q2wn/Screenshot-2026-03-23-213812.png" target="_blank" rel="noreferrer" className="mb-4 md:mb-5 break-inside-avoid block rounded-[2rem] overflow-hidden shadow-xl border border-white/10 bg-[#0b1220] cursor-zoom-in">
+              <img src="https://i.ibb.co/pBJ4q2wn/Screenshot-2026-03-23-213812.png" alt="TRUAIR job 10" className="w-full h-auto block hover:scale-[1.02] transition duration-300" />
+            </a>
+            <a href="https://i.ibb.co/d0zBwV60/Screenshot-2026-03-23-213819.png" target="_blank" rel="noreferrer" className="mb-4 md:mb-5 break-inside-avoid block rounded-[2rem] overflow-hidden shadow-xl border border-white/10 bg-[#0b1220] cursor-zoom-in">
+              <img src="https://i.ibb.co/d0zBwV60/Screenshot-2026-03-23-213819.png" alt="TRUAIR job 11" className="w-full h-auto block hover:scale-[1.02] transition duration-300" />
+            </a>
+            <a href="https://i.ibb.co/0przShR9/Screenshot-2026-03-23-213828.png" target="_blank" rel="noreferrer" className="mb-4 md:mb-5 break-inside-avoid block rounded-[2rem] overflow-hidden shadow-xl border border-white/10 bg-[#0b1220] cursor-zoom-in">
+              <img src="https://i.ibb.co/0przShR9/Screenshot-2026-03-23-213828.png" alt="TRUAIR job 12" className="w-full h-auto block hover:scale-[1.02] transition duration-300" />
+            </a>
+            <a href="https://i.ibb.co/BV2CgdWq/Screenshot-2026-03-23-213836.png" target="_blank" rel="noreferrer" className="mb-4 md:mb-5 break-inside-avoid block rounded-[2rem] overflow-hidden shadow-xl border border-white/10 bg-[#0b1220] cursor-zoom-in">
+              <img src="https://i.ibb.co/BV2CgdWq/Screenshot-2026-03-23-213836.png" alt="TRUAIR job 13" className="w-full h-auto block hover:scale-[1.02] transition duration-300" />
+            </a>
+            <a href="https://i.ibb.co/qLpS2Gzh/Screenshot-2026-03-23-213844.png" target="_blank" rel="noreferrer" className="mb-4 md:mb-5 break-inside-avoid block rounded-[2rem] overflow-hidden shadow-xl border border-white/10 bg-[#0b1220] cursor-zoom-in">
+              <img src="https://i.ibb.co/qLpS2Gzh/Screenshot-2026-03-23-213844.png" alt="TRUAIR job 14" className="w-full h-auto block hover:scale-[1.02] transition duration-300" />
+            </a>
           </div>
         </div>
       </section>
@@ -315,18 +375,8 @@ export default function Home() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 max-w-6xl mx-auto">
               <a href="tel:0497878247" className="rounded-2xl border border-white/10 bg-white/[0.04] hover:bg-white/[0.06] transition px-5 py-5 md:px-6 md:py-6 text-slate-200 font-medium inline-flex items-center justify-center gap-3"><span>📞</span><span>0497 878 247</span></a>
               <a href="mailto:john@truair.com.au" className="rounded-2xl border border-white/10 bg-white/[0.04] hover:bg-white/[0.06] transition px-5 py-5 md:px-6 md:py-6 text-slate-200 font-medium inline-flex items-center justify-center gap-3"><span>✉️</span><span>john@truair.com.au</span></a>
-              <a href="https://www.facebook.com/Truairconditioning" target="_blank" rel="noreferrer" className="rounded-2xl border border-white/10 bg-white/[0.04] hover:bg-white/[0.06] transition px-5 py-5 md:px-6 md:py-6 text-slate-200 font-medium inline-flex items-center justify-center gap-3">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 text-white">
-                  <path d="M22 12.07C22 6.477 17.523 2 12 2S2 6.477 2 12.07c0 5.056 3.657 9.247 8.438 10v-7.03H7.898v-2.97h2.54V9.845c0-2.522 1.492-3.916 3.777-3.916 1.094 0 2.238.198 2.238.198v2.476h-1.26c-1.243 0-1.63.775-1.63 1.57v1.887h2.773l-.443 2.97h-2.33v7.03C18.343 21.317 22 17.126 22 12.07z"/>
-                </svg>
-                <span>Facebook</span>
-              </a>
-              <a href="https://www.instagram.com/truair_airconditioning" target="_blank" rel="noreferrer" className="rounded-2xl border border-white/10 bg-white/[0.04] hover:bg-white/[0.06] transition px-5 py-5 md:px-6 md:py-6 text-slate-200 font-medium inline-flex items-center justify-center gap-3">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 text-white">
-                  <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm8.5 1.8h-8.5A3.95 3.95 0 0 0 3.8 7.75v8.5a3.95 3.95 0 0 0 3.95 3.95h8.5a3.95 3.95 0 0 0 3.95-3.95v-8.5a3.95 3.95 0 0 0-3.95-3.95zM12 7.3A4.7 4.7 0 1 1 7.3 12 4.705 4.705 0 0 1 12 7.3zm0 1.8A2.9 2.9 0 1 0 14.9 12 2.903 2.903 0 0 0 12 9.1zm4.95-2.75a1.15 1.15 0 1 1-1.15 1.15 1.15 1.15 0 0 1 1.15-1.15z"/>
-                </svg>
-                <span>Instagram</span>
-              </a>
+              <a href="https://www.facebook.com/Truairconditioning" target="_blank" rel="noreferrer" className="rounded-2xl border border-white/10 bg-white/[0.04] hover:bg-white/[0.06] transition px-5 py-5 md:px-6 md:py-6 text-slate-200 font-medium inline-flex items-center justify-center gap-3"><span>Facebook</span></a>
+              <a href="https://www.instagram.com/truair_airconditioning" target="_blank" rel="noreferrer" className="rounded-2xl border border-white/10 bg-white/[0.04] hover:bg-white/[0.06] transition px-5 py-5 md:px-6 md:py-6 text-slate-200 font-medium inline-flex items-center justify-center gap-3"><span>Instagram</span></a>
             </div>
           </div>
         </div>
@@ -343,18 +393,8 @@ export default function Home() {
                 TRUAIR PTY LTD • ABN 75 628 083 018 • Melbourne Heating &amp; Cooling Specialists • Premium installations done properly
               </div>
               <div className="flex items-center justify-center md:justify-end gap-6 flex-wrap text-slate-300 text-sm md:text-base">
-                <a href="https://www.facebook.com/Truairconditioning" target="_blank" rel="noreferrer" className="hover:text-cyan-300 inline-flex items-center gap-2 transition">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 text-white">
-                    <path d="M22 12.07C22 6.477 17.523 2 12 2S2 6.477 2 12.07c0 5.056 3.657 9.247 8.438 10v-7.03H7.898v-2.97h2.54V9.845c0-2.522 1.492-3.916 3.777-3.916 1.094 0 2.238.198 2.238.198v2.476h-1.26c-1.243 0-1.63.775-1.63 1.57v1.887h2.773l-.443 2.97h-2.33v7.03C18.343 21.317 22 17.126 22 12.07z"/>
-                  </svg>
-                  <span>Facebook</span>
-                </a>
-                <a href="https://www.instagram.com/truair_airconditioning" target="_blank" rel="noreferrer" className="hover:text-cyan-300 inline-flex items-center gap-2 transition">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 text-white">
-                    <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm8.5 1.8h-8.5A3.95 3.95 0 0 0 3.8 7.75v8.5a3.95 3.95 0 0 0 3.95 3.95h8.5a3.95 3.95 0 0 0 3.95-3.95v-8.5a3.95 3.95 0 0 0-3.95-3.95zM12 7.3A4.7 4.7 0 1 1 7.3 12 4.705 4.705 0 0 1 12 7.3zm0 1.8A2.9 2.9 0 1 0 14.9 12 2.903 2.903 0 0 0 12 9.1zm4.95-2.75a1.15 1.15 0 1 1-1.15 1.15 1.15 1.15 0 0 1 1.15-1.15z"/>
-                  </svg>
-                  <span>Instagram</span>
-                </a>
+                <a href="https://www.facebook.com/Truairconditioning" target="_blank" rel="noreferrer" className="hover:text-cyan-300 transition">Facebook</a>
+                <a href="https://www.instagram.com/truair_airconditioning" target="_blank" rel="noreferrer" className="hover:text-cyan-300 transition">Instagram</a>
               </div>
             </div>
           </div>
